@@ -1,0 +1,77 @@
+.container {
+    margin: 0 auto;
+
+    border: 5px solid red;
+    display: grid;
+    grid-template-rows: repeat(4, 100px);
+    grid-template-columns: repeat(auto-fit, minmax (100px,1fr));
+    /* para responsive and dli na need mo gamit medeia  */
+
+    /* grid-template-columns: 1fr 3fr; */
+    /* grid-template-rows: 100px 300px 100px; */
+    /* grid-template-areas: 
+     'header header'
+    'main aside'
+    'footer footer'; */
+    /* mas dali butang ug box kay i link ra nimo using single qoutes then
+     use grid area sa item na imo ganahan i butang */
+    /* grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 100px); */
+    /* grid-template-rows: 1fr 1fr 1fr minmax(100px, 2fr); */
+    /* gamit ug minmax para responsive */
+    /* grid-template-columns:  100px 100px 100px 100px 100px 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px; */
+    /* grid-auto-rows: 100px; */
+    /* butang ug auto rows para sa mga implicit na mabutang sa container
+    para mo follow sa gi set na size */
+    /* grid-gap: 1em 2em; */
+    /* ang first kay gap sa row then column dayon */
+}
+.box {
+    border: 7px solid blue;
+    background-color: aqua;
+    font-size: 50px;
+}
+ /* .item-1 {
+    /* grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 4; */
+    /* grid-area: 1 / 1 / 4 / 9; */
+    grid-area: header;
+}   */
+
+/* .item-2 {
+    /* grid-row: 2 / 3;
+    grid-column: 2 / 4; */
+    /* mas mubo sa isa pero same concept */
+    /* una ang start then ang end */
+    grid-row: span 2 ;
+    grid-column: span 2;
+    /* dli ma anchor kay wala na define ang end ug start sa item meaning ma distort siya pag 
+    ang uban item padak on */
+    grid-area: 3 / 5 / 7  / 8;
+    z-index: 1;
+    /* gamit ug z index para sa layering meaning 
+    masapaw nimo ang taga box */
+
+}  */
+/* .item-3 {
+    /* grid-area: starting row, starting column, end row, end column; */
+    grid-area: 4 / 1 / -1/ -1;
+    /* very useful kay mubo ra */
+}    */
+
+
+
+/* .item-2 {
+    grid-area: main;
+}
+
+.item-3 {
+    grid-area: aside;
+}
+
+.item-4 {
+    grid-area: footer;
+} */
